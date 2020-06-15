@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "src/variables.scss";
+h1 {
+  color: #ffffff;
+}
+
+h2 {
+  color: #fff;
+}
+
+body {
+  background-color: $app-color-dark;
+}
+
+p {
+  color: #fff;
+}

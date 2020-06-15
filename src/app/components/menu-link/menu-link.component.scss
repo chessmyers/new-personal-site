@@ -1,0 +1,69 @@
+@import "src/variables.scss";
+
+.vertical-link {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.glass {
+  background-color: $app-color-primary;
+  background-image: linear-gradient($app-color-primary, $app-color-secondary);
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: $app-main-font;
+
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px -2px #333;
+  text-shadow: 0px -1px #333;
+}
+
+.glass:hover {
+  background: linear-gradient($app-color-primary, $app-color-light);
+}
+
+.glass:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.link-container {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.link {
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.link-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.link-container .material-icons path {
+  fill: rgb(105, 103, 103);
+}
+
+a,
+a:visited,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2rem;
+}
+
+a:hover {
+  color: #125699;
+}

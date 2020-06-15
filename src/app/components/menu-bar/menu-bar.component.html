@@ -1,0 +1,82 @@
+<div class="menu-border">
+  <div class="corner">
+<!--    TOP LEFT-->
+
+  </div>
+  <div>
+<!--    TOP MIDDLE-->
+    <app-menu-link
+      [vertical]="false"
+      name="Home"
+      to="/home">
+    </app-menu-link>
+  </div>
+  <div class="corner">
+<!--    TOP RIGHT-->
+
+  </div>
+  <div >
+<!--    MIDDLE LEFT-->
+    <app-menu-link
+      [vertical]="true"
+      name="Projects"
+      to="/projects">
+    </app-menu-link>
+  </div>
+  <div>
+<!--    CENTER -->
+    <ng-content></ng-content>
+  </div>
+  <div>
+<!--    MIDDLE RIGHT-->
+    <app-menu-link
+      [vertical]="true"
+      name="Experience"
+      to="/blog">
+    </app-menu-link>
+  </div>
+  <div class="corner">
+<!--    BOTTOM LEFT-->
+
+  </div>
+  <div>
+<!--    BOTTOM MIDDLE-->
+    <app-menu-link
+      [vertical]="false"
+      name="Blog"
+      to="/blog">
+    </app-menu-link>
+  </div>
+  <div class="corner">
+<!--    BOTTOM RIGHT-->
+
+  </div>
+<!--  <app-menu-link-->
+<!--    class="top"-->
+<!--    to="/blog"-->
+<!--    name="Blog"-->
+<!--    [vertical]="false"-->
+<!--  >-->
+<!--  </app-menu-link>-->
+<!--  <app-menu-link-->
+<!--    class="right"-->
+<!--    to="/home"-->
+<!--    name="Home"-->
+<!--    [vertical]="true"-->
+<!--  >-->
+<!--  </app-menu-link>-->
+<!--  <app-menu-link-->
+<!--    class="bottom"-->
+<!--    to="/projects"-->
+<!--    name="Projects"-->
+<!--    [vertical]="false"-->
+<!--  >-->
+<!--  </app-menu-link>-->
+<!--  <app-menu-link-->
+<!--    class="left"-->
+<!--    to="/experience"-->
+<!--    name="Experience"-->
+<!--    [vertical]="true"-->
+<!--  >-->
+<!--  </app-menu-link>-->
+</div>

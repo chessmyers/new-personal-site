@@ -1,0 +1,9 @@
+<h2>
+  Blog
+</h2>
+
+<ng-container *ngFor="let post of posts$ | async">
+  <app-blog-list-item
+    [data]="post"
+  ></app-blog-list-item>
+</ng-container>

@@ -1,0 +1,5 @@
+<div class="post" [routerLink]="['/post', data.id]" routerLinkActive="active">
+  <h3>{{data.title}}</h3>
+  <h4>By {{data.author}}</h4>
+  <h5>Published {{data.published | date}}</h5>
+</div>
