@@ -1,0 +1,26 @@
+<div class="card" style="border-radius: 20px">
+  <header class="card-header" style="border-radius: 20px;">
+    <h1 class="card-header-title card-header-text">
+      {{entry.name}}
+    </h1>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <div class="container">
+            {{entry.description}}
+          </div>
+
+        </div>
+        <div class="column">
+          <img [src]="entry.logo" alt="logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a [href]="entry.siteLink" target="_blank" class="card-footer-item">View Site</a>
+    <a disabled [routerLink]="entry.id.toString()" class="card-footer-item">Read More</a>
+  </footer>
+</div>

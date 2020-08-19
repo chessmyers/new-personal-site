@@ -1,0 +1,30 @@
+<div class="card" style="border-radius: 20px">
+  <header class="card-header" style="border-radius: 20px;">
+    <h1 class="card-header-title card-header-text">
+      {{project.name}}
+    </h1>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <div class="container">
+            {{project.description}}
+          </div>
+
+        </div>
+        <div class="column">
+          <img [src]="project.images[0]" alt="pic from project" />
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="button is-primary is-light" *ngFor="let tech of project.techs" [href]="tech.url" >
+          {{tech.name}}
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a [routerLink]="project.id.toString()" class="card-footer-item" target="_blank">View</a>
+  </footer>
+</div>

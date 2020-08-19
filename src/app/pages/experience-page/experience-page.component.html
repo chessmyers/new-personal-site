@@ -1,0 +1,16 @@
+<app-page-template pageTitle="Some Places I've Worked">
+  <div class="columns">
+    <div class="column is-two-thirds">
+      I've been lucky enough to have some interesting jobs over the years
+    </div>
+    <div class="column">
+      <div class="hard-center is-3by2">
+        <img src="assets/fast_working.svg" alt="Working" />
+      </div>
+    </div>
+  </div>
+  <div class="container" style="max-width: 800px">
+    <app-work-card *ngFor="let job of jobs" [entry]="job"></app-work-card>
+  </div>
+
+</app-page-template>

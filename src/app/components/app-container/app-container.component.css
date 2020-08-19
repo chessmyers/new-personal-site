@@ -1,0 +1,19 @@
+.content-view {
+  width: 70vw;
+  margin: 60px auto auto;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(158,158,158,0.69);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(158,158,158,0.69);
+  box-shadow: 0px 5px 10px 0px rgba(158,158,158,0.69);
+}
+
+@media only screen and (max-width: 700px) {
+  .content-view {
+    width: 90vw;
+  }
+
+}

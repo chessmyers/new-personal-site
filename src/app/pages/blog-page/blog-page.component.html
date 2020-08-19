@@ -1,0 +1,23 @@
+<app-page-template pageTitle="Blog">
+  <p-tabView (onChange)="changeTab($event)">
+
+    <p-tabPanel header="Thoughts" leftIcon="pi pi-question" tooltip="Random posts here">
+      <ng-template pTemplate="content">
+        Thoughts stuff
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel header="Music" leftIcon="pi pi-sliders-v" (click)="selectMusic()">
+      <ng-template pTemplate="content">
+        Music stuff
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel header="Book Reviews" leftIcon="pi pi-bookmark">
+      <ng-template pTemplate="content">
+        Book Reviews
+      </ng-template>
+    </p-tabPanel>
+
+  </p-tabView>
+</app-page-template>

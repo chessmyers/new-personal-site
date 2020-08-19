@@ -1,0 +1,15 @@
+<app-page-template pageTitle="Some Projects I've Worked On">
+  <div class="columns">
+    <div class="column">
+      These are some of the projects I've worked on over the past few years.
+      To see more, check out my Github at <a href="https://github.com/chessmyers" target="_blank">https://github.com/chessmyers</a>
+    </div>
+    <div class="column">
+      <img src="assets/coding_project.svg" alt="Projects"/>
+    </div>
+  </div>
+  <div class="container" style="max-width: 800px">
+    <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+  </div>
+
+</app-page-template>
