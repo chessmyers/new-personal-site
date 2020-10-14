@@ -8,5 +8,6 @@ import {Component, Input} from '@angular/core';
 export class PageTemplateComponent {
 
   @Input() pageTitle: string;
+  @Input() pageSubtitle = '';
 
 }

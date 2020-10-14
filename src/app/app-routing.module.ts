@@ -27,13 +27,14 @@ const routes: Routes = [
     component: BlogPageComponent,
     data: {
       breadcrumb: 'Blog'
-    },
-    children: [
-      {
-        path: 'post',
-        component: BlogViewPageComponent
-      }
-    ]
+    }
+  },
+  {
+    path: 'blog/:id',
+    component: BlogViewPageComponent,
+    data: {
+      breadcrumb: 'Blog View'
+    }
   },
   {
     path: 'experience',

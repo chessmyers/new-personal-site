@@ -1,6 +1,8 @@
 export interface PostModel {
+  postID: string;
+  postSlug: string;
   title: string;
-  color: string;
-  content: any;
-  picture: string;
+  date: Date;
+  image: any;
+  body: Array<any>;
 }

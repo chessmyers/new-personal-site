@@ -14,7 +14,6 @@ h2 {
 }
 
 p {
-  margin: 40px;
   font-size: 120%;
 }
 
@@ -30,12 +29,13 @@ p {
   padding: 20px;
 }
 
+.rounded-image {
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-position: right;
-  }
-  p {
-    width: 20%;
   }
 
 }

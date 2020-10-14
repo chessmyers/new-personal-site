@@ -4,6 +4,13 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { MessageModule } from 'primeng/message';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { TabViewModule } from 'primeng/tabview';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
@@ -24,6 +31,9 @@ import { WorkCardComponent } from './components/work-card/work-card.component';
 import { ExperienceViewPageComponent } from './pages/experience-view-page/experience-view-page.component';
 import { ProjectViewPageComponent } from './pages/project-view-page/project-view-page.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import {DateArrayToStringPipe} from './pipes/dateArrayToString.pipe';
+import {ReactiveFormsModule} from '@angular/forms';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +52,9 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     WorkCardComponent,
     ExperienceViewPageComponent,
     ProjectViewPageComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    DateArrayToStringPipe,
+    BlogCardComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +64,13 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     RouterModule,
     AppRoutingModule,
     BreadcrumbModule,
-    TabViewModule
+    TabViewModule,
+    DialogModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    InputTextareaModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

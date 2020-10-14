@@ -1,0 +1,25 @@
+.submit-button {
+  background-color: #689f38;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin: 5px 10px;
+}
+
+.attr-text {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+  font-size: 60%;
+}

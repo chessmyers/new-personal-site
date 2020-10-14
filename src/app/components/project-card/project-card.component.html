@@ -1,30 +1,38 @@
-<div class="card" style="border-radius: 20px">
-  <header class="card-header" style="border-radius: 20px;">
-    <h1 class="card-header-title card-header-text">
-      {{project.name}}
-    </h1>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      <div class="columns">
-        <div class="column is-two-thirds">
-          <div class="container">
-            {{project.description}}
-          </div>
+<!--<div class="card" style="border-radius: 20px">-->
+<!--  <header class="card-header" style="border-radius: 20px;">-->
+<!--    <h1 class="card-header-title card-header-text">-->
+<!--      {{project.name}}-->
+<!--    </h1>-->
+<!--  </header>-->
+<!--  <div class="card-content">-->
+<!--    <div class="content">-->
+<!--      <div class="columns">-->
+<!--        <div class="column is-two-thirds">-->
+<!--          <div class="container">-->
+<!--            {{project.description}}-->
+<!--          </div>-->
 
-        </div>
-        <div class="column">
-          <img [src]="project.images[0]" alt="pic from project" />
-        </div>
-      </div>
-      <div class="buttons">
-        <a class="button is-primary is-light" *ngFor="let tech of project.techs" [href]="tech.url" >
-          {{tech.name}}
-        </a>
-      </div>
-    </div>
-  </div>
-  <footer class="card-footer">
-    <a [routerLink]="project.id.toString()" class="card-footer-item" target="_blank">View</a>
-  </footer>
-</div>
+<!--        </div>-->
+<!--        <div class="column">-->
+<!--          <img [src]="project.images[0]" alt="pic from project" />-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="buttons">-->
+<!--        <a class="button is-primary is-light" *ngFor="let tech of project.techs" [href]="tech.url" >-->
+<!--          {{tech.name}}-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <footer class="card-footer">-->
+<!--    <a [routerLink]="project.id.toString()" class="card-footer-item" target="_blank">View</a>-->
+<!--  </footer>-->
+<!--</div>-->
+
+<article [ngClass]="darkText ? 'dark-text-' : 'light-text'" (click)="openProject.emit(project)">
+  <p class="title">{{project.name}}</p>
+  <p class="subtitle">{{project.shortBlurb}}</p>
+  <figure class="image" [ngClass]="imageConfig && imageConfig === 'vert' ? 'is-2by3' : 'is-3by2'" *ngIf="imageConfig">
+    <img class="rounded-image" [src]='"assets/".concat(project.images[0])' [alt]="project.name.concat(' image')">
+  </figure>
+</article>

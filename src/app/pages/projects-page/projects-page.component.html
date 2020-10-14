@@ -1,15 +1,94 @@
-<app-page-template pageTitle="Some Projects I've Worked On">
-  <div class="columns">
-    <div class="column">
-      These are some of the projects I've worked on over the past few years.
-      To see more, check out my Github at <a href="https://github.com/chessmyers" target="_blank">https://github.com/chessmyers</a>
+<app-page-template pageTitle="Some Projects I've Worked On" pageSubtitle="Feel free to take a look!">
+
+      <p>
+        These are some of the projects I've worked on over the past few years.
+      </p>
+      <p>
+        To see more, check out my Github at <a href="https://github.com/chessmyers" target="_blank">https://github.com/chessmyers</a>
+      </p>
+
+  <div class="tile is-ancestor padding-20">
+    <div class="tile is-vertical is-8">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <app-project-card [project]="projects[1]" (openProject)="showProject($event)">
+          </app-project-card>
+          <app-project-card [project]="projects[2]" imageConfig="hor" (openProject)="showProject($event)">
+          </app-project-card>
+        </div>
+        <div class="tile is-parent">
+          <app-project-card [project]="projects[0]" imageConfig="vert" (openProject)="showProject($event)">
+          </app-project-card>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <app-project-card [project]="projects[4]" (openProject)="showProject($event)">
+        </app-project-card>
+      </div>
+      <div class="tile is-parent">
+        <app-project-card [project]="projects[9]" (openProject)="showProject($event)">
+        </app-project-card>
+      </div>
+      <div class="tile is-parent">
+        <div class="tile is-parent">
+          <app-project-card [project]="projects[5]" imageConfig="vert" (openProject)="showProject($event)">
+          </app-project-card>
+        </div>
+        <div class="tile is-parent is-vertical">
+          <app-project-card [project]="projects[6]" (openProject)="showProject($event)">
+          </app-project-card>
+          <app-project-card [project]="projects[12]" [darkText]="true" (openProject)="showProject($event)">
+          </app-project-card>
+        </div>
+      </div>
     </div>
-    <div class="column">
-      <img src="assets/coding_project.svg" alt="Projects"/>
+
+<!--  Right column-->
+    <div class="tile is-parent is-vertical">
+      <app-project-card [project]="projects[3]" [darkText]="true" imageConfig="hor" (openProject)="showProject($event)">
+      </app-project-card>
+      <app-project-card [project]="projects[11]" (openProject)="showProject($event)">
+      </app-project-card>
+      <app-project-card [project]="projects[10]" (openProject)="showProject($event)">
+      </app-project-card>
+      <app-project-card [project]="projects[8]" imageConfig="hor" (openProject)="showProject($event)">
+      </app-project-card>
+      <app-project-card [project]="projects[7]" imageConfig="hor" (openProject)="showProject($event)">
+      </app-project-card>
     </div>
-  </div>
-  <div class="container" style="max-width: 800px">
-    <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
   </div>
 
 </app-page-template>
+
+<p-dialog [(visible)]="showModal" [baseZIndex]="10000" [style]="{width: '75vw'}">
+  <p-header>
+    <h1 style="font-size: 200%">{{currentProject.name}}</h1>
+    <i>{{currentProject.dates | dateArrayToString}}</i>
+  </p-header>
+  {{currentProject.description}}
+  <div class="box" *ngFor="let image of currentProject.images">
+    <img
+      class="rounded-image"
+      [src]='"assets/".concat(image)'
+      [alt]="currentProject.name.concat(' image')">
+  </div>
+
+  <p-footer>
+    <div class="button-container">
+      <div class="padding-20">
+        <a [href]="currentProject.website" target="_blank" *ngIf="currentProject.website">
+          <button pButton type="button" label="Website" class="website-button" icon="pi pi-globe" iconPos="left"></button>
+        </a>
+        <a [href]="currentProject.source" target="_blank" *ngIf="currentProject.source">
+          <button pButton type="button" label="Source Code" class="source-button" icon="pi pi-star" iconPos="left"></button>
+        </a>
+      </div>
+      <div>
+        <a *ngFor="let tech of currentProject.techs" [href]="tech.url" target="_blank" class="tech-pill">
+          <span class="tag is-small" [style]="'color: white; background-color: '.concat(tech.color)">{{tech.name}}</span>
+        </a>
+      </div>
+    </div>
+
+  </p-footer>
+</p-dialog>

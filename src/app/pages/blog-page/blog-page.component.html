@@ -1,21 +1,42 @@
 <app-page-template pageTitle="Blog">
   <p-tabView (onChange)="changeTab($event)">
-
-    <p-tabPanel header="Thoughts" leftIcon="pi pi-question" tooltip="Random posts here">
+    <p-tabPanel header="General" leftIcon="pi pi-question" tooltip="Random posts here">
       <ng-template pTemplate="content">
-        Thoughts stuff
+        <h2 *ngIf="generalPosts.length === 0">No content yet...coming soon!</h2>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent" style="flex-wrap: wrap">
+            <div *ngFor="let post of generalPosts" class="post-container tile is-child is-6">
+              <app-blog-card [post]="post" [color]="generalColor"></app-blog-card>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </p-tabPanel>
 
-    <p-tabPanel header="Music" leftIcon="pi pi-sliders-v" (click)="selectMusic()">
+    <p-tabPanel header="Music" leftIcon="pi pi-sliders-v">
       <ng-template pTemplate="content">
-        Music stuff
+        <h2 *ngIf="musicPosts.length === 0">No content yet...coming soon!</h2>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent" style="flex-wrap: wrap">
+            <div *ngFor="let post of musicPosts" class="post-container tile is-child is-6">
+              <app-blog-card [post]="post" [color]="musicColor"></app-blog-card>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </p-tabPanel>
 
     <p-tabPanel header="Book Reviews" leftIcon="pi pi-bookmark">
       <ng-template pTemplate="content">
-        Book Reviews
+
+        <h2 *ngIf="bookPosts.length === 0">No content yet...coming soon!</h2>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent" style="flex-wrap: wrap">
+            <div *ngFor="let post of bookPosts" class="post-container tile is-child is-6">
+              <app-blog-card [post]="post" [color]="bookColor"></app-blog-card>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </p-tabPanel>
 

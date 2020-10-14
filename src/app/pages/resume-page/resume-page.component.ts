@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume-page.component.css']
 })
 export class ResumePageComponent implements OnInit {
+  title = "My Resume";
+  subtitle = "Last updated: August 2020";
 
   constructor() { }
 

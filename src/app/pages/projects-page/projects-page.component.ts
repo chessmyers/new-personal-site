@@ -10,11 +10,19 @@ import {ProjectService} from '../../services/project.service';
 export class ProjectsPageComponent implements OnInit {
 
   projects: ProjectModel[] = [];
+  showModal = false;
+  currentProject: ProjectModel;
 
   constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
+    this.currentProject = this.projects[0];
+  }
+
+  showProject(project: ProjectModel) {
+    this.currentProject = project;
+    this.showModal = true;
   }
 
 }

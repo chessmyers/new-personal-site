@@ -1,0 +1,7 @@
+<article [style]="'background-color: '.concat(color)" [routerLink]="post.postID">
+  <p class="title">{{ post.title }}</p>
+  <p class="subtitle">Posted {{post.date | date:'mediumDate'}} </p>
+<!--  <figure class="image" [ngClass]="imageConfig && imageConfig === 'vert' ? 'is-2by3' : 'is-3by2'" *ngIf="imageConfig">-->
+<!--    <img class="rounded-image" [src]='"assets/".concat(project.images[0])' [alt]="project.name.concat(' image')">-->
+<!--  </figure>-->
+</article>

@@ -1,1 +1,3 @@
-<p>Viewing blog page</p>
+<h1 *ngIf="htmlTitle" [innerHTML]="htmlTitle"></h1>
+<img *ngIf="mainImage" [src]="mainImage.src" [alt]="mainImage.alt" class="rounded-image post" />
+<p *ngIf="htmlBody" [innerHTML]="htmlBody"></p>
