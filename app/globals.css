@@ -660,7 +660,7 @@ a {
   padding-bottom: clamp(1rem, 2vw, 1.5rem);
   border-bottom: 1px solid var(--border-strong);
   font-family: var(--font-display), Georgia, serif;
-  font-size: clamp(2rem, 5.5vw, 5.5rem);
+  font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 400;
   line-height: 1;
   transition: border-color 220ms ease, color 220ms ease;
@@ -668,6 +668,7 @@ a {
 
 .email-link span {
   overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .email-link svg {
@@ -962,6 +963,10 @@ a {
   .email-link {
     align-items: flex-end;
     font-size: clamp(1.65rem, 8.7vw, 2.6rem);
+  }
+
+  .email-link span {
+    white-space: normal;
   }
 
   .site-footer__inner {
