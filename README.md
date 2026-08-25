@@ -13,17 +13,7 @@ content/site-content.ts
 ## Images
 
 - The hero uses `public/images/backgroundimage.webp`.
-- To add a portrait, place it at `public/images/portrait.jpg`, then change `about.portrait` in `content/site-content.ts` from `null` to:
-
-```ts
-{
-  src: "/images/portrait.jpg",
-  alt: "A descriptive portrait alt text",
-  position: "center 35%",
-}
-```
-
-Until then, the About section displays an intentional monogram placeholder.
+- The portrait uses `public/images/portrait.webp`.
 
 ## Run locally
 
