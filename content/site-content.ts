@@ -86,16 +86,16 @@ export const siteContent: SiteContent = {
       position: "center 62%",
     },
     summary:
-      "Software engineer interested in technology, design, cities, and building thoughtful products.",
+      "Software engineer interested in technology, language, urban design, and building thoughtful products.",
     scrollLabel: "Scroll to explore",
   },
   about: {
     sectionNumber: "01",
     sectionLabel: "About",
-    heading: "Hi, I’m Christopher.",
+    heading: "Hi, I’m Chris.",
     paragraphs: [
-      "I’m a software engineer who enjoys turning complex ideas into useful, considered products. My work sits at the intersection of technology, design, and the way people experience the world around them.",
-      "I’m especially drawn to thoughtful details, clear systems, and work that feels quietly human. Outside of software, I spend my time exploring cities, architecture, languages, and the landscapes between them.",
+      "I’m a software engineer who enjoys building useful products and solving interesting problems. I care about making software that works well, feels intuitive, and is thoughtfully designed.",
+      "Outside of product development, I spend my time exploring cities, architecture, languages, and the landscapes between them.",
     ],
     contactLabel: "Get in touch",
     portrait: {
@@ -104,7 +104,7 @@ export const siteContent: SiteContent = {
       position: "center 35%",
     },
     details: [
-      { label: "Location", value: "Los Angeles, CA", icon: "location" },
+      { label: "Location", value: "California, USA", icon: "location" },
       { label: "Education", value: "UC San Diego", icon: "education" },
       {
         label: "Focus",
