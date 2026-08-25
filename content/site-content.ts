@@ -79,7 +79,7 @@ export const siteContent: SiteContent = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    eyebrow: "Personal profile · Los Angeles",
+    eyebrow: "Personal profile",
     background: {
       src: "/images/backgroundimage.webp",
       alt: "Coastal hills descending toward the ocean under an open sky",
@@ -148,9 +148,9 @@ export const siteContent: SiteContent = {
   contact: {
     sectionNumber: "03",
     sectionLabel: "Contact",
-    heading: "Let’s make something thoughtful.",
+    heading: "Let’s make something useful.",
     invitation:
-      "Have a question, an idea, or simply want to say hello? I’d be glad to hear from you.",
+      "I’m always happy to talk about interesting ideas, projects, or opportunities.",
     email: "hello@christophermyers.info",
   },
   socials: [
@@ -158,6 +158,6 @@ export const siteContent: SiteContent = {
     { label: "GitHub", href: "https://github.com/chessmyers" },
   ],
   footer: {
-    note: "Designed with care in Los Angeles.",
+    note: "Designed with care in California.",
   },
 };
