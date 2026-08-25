@@ -67,7 +67,7 @@ export type SiteContent = {
 // Edit this object to update every piece of personal content on the site.
 export const siteContent: SiteContent = {
   metadata: {
-    title: "Christopher Myers — Personal Profile",
+    title: "Christopher Myers",
     description:
       "Christopher Myers is a software engineer interested in technology, design, cities, and thoughtful products.",
   },
@@ -79,7 +79,7 @@ export const siteContent: SiteContent = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    eyebrow: "Personal profile",
+    eyebrow: "Hello, I'm",
     background: {
       src: "/images/backgroundimage.webp",
       alt: "Coastal hills descending toward the ocean under an open sky",
