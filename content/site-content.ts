@@ -158,8 +158,8 @@ export const siteContent: SiteContent = {
     email: "hello@christophermyers.info",
   },
   socials: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/example" },
-    { label: "GitHub", href: "https://github.com/example" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/c-t-myers" },
+    { label: "GitHub", href: "https://github.com/chessmyers" },
   ],
   footer: {
     note: "Designed with care in Los Angeles.",
