@@ -117,9 +117,9 @@ export const siteContent: SiteContent = {
       },
       {
         label: "Email",
-        value: "hello@example.com",
+        value: "hello@christophermyers.info",
         icon: "email",
-        href: "mailto:hello@example.com",
+        href: "mailto:hello@christophermyers.info",
       },
     ],
   },
@@ -155,7 +155,7 @@ export const siteContent: SiteContent = {
     heading: "Let’s make something thoughtful.",
     invitation:
       "Have a question, an idea, or simply want to say hello? I’d be glad to hear from you.",
-    email: "hello@example.com",
+    email: "hello@christophermyers.info",
   },
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/example" },
