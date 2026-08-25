@@ -29,11 +29,7 @@ export type SiteContent = {
     heading: string;
     paragraphs: string[];
     contactLabel: string;
-    portrait: ImageContent | null;
-    portraitPlaceholder: {
-      eyebrow: string;
-      note: string;
-    };
+    portrait: ImageContent;
     details: Array<{
       label: string;
       value: string;
@@ -85,7 +81,7 @@ export const siteContent: SiteContent = {
   hero: {
     eyebrow: "Personal profile · Los Angeles",
     background: {
-      src: "/images/backgroundimage.jpg",
+      src: "/images/backgroundimage.webp",
       alt: "Coastal hills descending toward the ocean under an open sky",
       position: "center 62%",
     },
@@ -102,10 +98,10 @@ export const siteContent: SiteContent = {
       "I’m especially drawn to thoughtful details, clear systems, and work that feels quietly human. Outside of software, I spend my time exploring cities, architecture, languages, and the landscapes between them.",
     ],
     contactLabel: "Get in touch",
-    portrait: null,
-    portraitPlaceholder: {
-      eyebrow: "Portrait",
-      note: "Add your photograph in public/images/portrait.jpg",
+    portrait: {
+      src: "/images/portrait.webp",
+      alt: "A descriptive portrait alt text",
+      position: "center 35%",
     },
     details: [
       { label: "Location", value: "Los Angeles, CA", icon: "location" },

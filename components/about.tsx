@@ -26,7 +26,10 @@ export function About() {
     <section id="about" className="section section--about scroll-mt-0">
       <div className="page-shell">
         <Reveal>
-          <SectionLabel number={about.sectionNumber} label={about.sectionLabel} />
+          <SectionLabel
+            number={about.sectionNumber}
+            label={about.sectionLabel}
+          />
         </Reveal>
 
         <div className="about-grid">
@@ -44,27 +47,14 @@ export function About() {
           </Reveal>
 
           <Reveal className="portrait-frame" delay={140}>
-            {about.portrait ? (
-              <Image
-                className="portrait-image"
-                src={about.portrait.src}
-                alt={about.portrait.alt}
-                fill
-                sizes="(max-width: 767px) 100vw, 46vw"
-                style={{ objectPosition: about.portrait.position }}
-              />
-            ) : (
-              <div className="portrait-placeholder" role="img" aria-label="Portrait placeholder">
-                <span className="portrait-placeholder__eyebrow">
-                  {about.portraitPlaceholder.eyebrow}
-                </span>
-                <span className="portrait-placeholder__initials">{initials}</span>
-                <span className="portrait-placeholder__line" aria-hidden="true" />
-                <span className="portrait-placeholder__note">
-                  {about.portraitPlaceholder.note}
-                </span>
-              </div>
-            )}
+            <Image
+              className="portrait-image"
+              src={about.portrait.src}
+              alt={about.portrait.alt}
+              fill
+              sizes="(max-width: 767px) 100vw, 46vw"
+              style={{ objectPosition: about.portrait.position }}
+            />
           </Reveal>
         </div>
 
@@ -73,16 +63,27 @@ export function About() {
             const Icon = detailIcons[detail.icon];
             const content = (
               <>
-                <Icon className="detail-item__icon" aria-hidden="true" strokeWidth={1.4} />
+                <Icon
+                  className="detail-item__icon"
+                  aria-hidden="true"
+                  strokeWidth={1.4}
+                />
                 <span className="detail-item__label">{detail.label}</span>
                 <span className="detail-item__value">{detail.value}</span>
               </>
             );
 
             return (
-              <Reveal className="detail-item" delay={index * 55} key={detail.label}>
+              <Reveal
+                className="detail-item"
+                delay={index * 55}
+                key={detail.label}
+              >
                 {detail.href ? (
-                  <a href={detail.href} aria-label={`${detail.label}: ${detail.value}`}>
+                  <a
+                    href={detail.href}
+                    aria-label={`${detail.label}: ${detail.value}`}
+                  >
                     {content}
                   </a>
                 ) : (

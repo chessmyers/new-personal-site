@@ -12,7 +12,7 @@ content/site-content.ts
 
 ## Images
 
-- The hero uses `public/images/backgroundimage.jpg`.
+- The hero uses `public/images/backgroundimage.webp`.
 - To add a portrait, place it at `public/images/portrait.jpg`, then change `about.portrait` in `content/site-content.ts` from `null` to:
 
 ```ts
