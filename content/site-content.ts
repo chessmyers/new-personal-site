@@ -92,7 +92,7 @@ export const siteContent: SiteContent = {
       position: "center 62%",
     },
     summary:
-      "Software engineer interested in technology, language, urban design, and building thoughtful products.",
+      "Software engineer building thoughtful products, with interests spanning AI, language, and urban design.",
     scrollLabel: "Scroll to explore",
   },
   about: {
@@ -152,7 +152,7 @@ export const siteContent: SiteContent = {
     ],
   },
   contact: {
-    sectionNumber: "03",
+    sectionNumber: "02",
     sectionLabel: "Contact",
     heading: "Let’s make something useful.",
     invitation:
