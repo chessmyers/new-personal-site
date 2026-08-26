@@ -3,6 +3,7 @@ import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { NowSection } from "@/components/now-section";
+import { siteContent } from "@/content/site-content";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <About />
-        <NowSection />
+        {siteContent.visibility.showNow ? <NowSection /> : null}
         <Contact />
       </main>
       <Footer />

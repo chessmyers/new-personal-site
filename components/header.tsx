@@ -11,13 +11,15 @@ export function Header() {
 
       <nav aria-label="Primary navigation">
         <ul className="nav-list">
-          {siteContent.navigation.map((item) => (
-            <li key={item.href}>
-              <a className="nav-link animated-link" href={item.href}>
-                {item.label}
-              </a>
-            </li>
-          ))}
+          {siteContent.navigation
+            .filter((item) => item.href !== "#now" || siteContent.visibility.showNow)
+            .map((item) => (
+              <li key={item.href}>
+                <a className="nav-link animated-link" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
         </ul>
       </nav>
     </header>

@@ -7,6 +7,9 @@ export type ImageContent = {
 };
 
 export type SiteContent = {
+  visibility: {
+    showNow: boolean;
+  };
   metadata: {
     title: string;
     description: string;
@@ -66,6 +69,9 @@ export type SiteContent = {
 
 // Edit this object to update every piece of personal content on the site.
 export const siteContent: SiteContent = {
+  visibility: {
+    showNow: false,
+  },
   metadata: {
     title: "Christopher Myers",
     description:
@@ -94,7 +100,7 @@ export const siteContent: SiteContent = {
     sectionLabel: "About",
     heading: "Hi, I’m Chris.",
     paragraphs: [
-      "I’m a software engineer who enjoys building useful products and solving interesting problems. I care about making software that works well, feels intuitive, and is thoughtfully designed.",
+      "I'm a software engineer focused on building useful, thoughtfully designed products. I especially enjoy working on AI systems and problems spanning product, engineering, and user experience.",
       "Outside of product development, I spend my time exploring cities, architecture, languages, and the landscapes between them.",
     ],
     contactLabel: "Get in touch",
@@ -108,7 +114,7 @@ export const siteContent: SiteContent = {
       { label: "Education", value: "UC San Diego", icon: "education" },
       {
         label: "Focus",
-        value: "Software, AI & product development",
+        value: "Software engineering, AI & product",
         icon: "focus",
       },
       {
@@ -150,7 +156,7 @@ export const siteContent: SiteContent = {
     sectionLabel: "Contact",
     heading: "Let’s make something useful.",
     invitation:
-      "I’m always happy to talk about interesting ideas, projects, or opportunities.",
+      "Always happy to talk about interesting ideas, projects, or opportunities.",
     email: "hello@christophermyers.info",
   },
   socials: [
